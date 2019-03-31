@@ -94,7 +94,8 @@ h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 .userCard .text h1 { margin-top: 18px; }
 .userCard .text hr { margin: 20px 0; }
 .userCard .pictureAndText { padding: 50px; }
-.userCard dl dt, .userCard dl dd { float: left; padding: 5px 0; }
+.userCard dl dt { float: left; padding: 5px 0; }
+.userCard dl dd{ float: right; padding: 5px 0; }
 .userCard dl dt { width: 30%; font-weight: bold; }
 .userCard dl dd { width: 70%; color: #9da0a7; }
 
