@@ -6,16 +6,16 @@ ul, ol { list-style: none; }
 h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 .clearfix::after { content: ''; display: block; clear: both; }
 
-[data-x].active{
+/* [data-x].active{
   outline: 10px solid red;
-}
-[data-x].offset{
+} */
+/* [data-x].offset{
   transform: translateY(100px);
-}
-[data-x]{
+} */
+/* [data-x]{
   transform: translateY(0);
   transition: all 0.5s;
-}
+}  */
 @keyframes slideUp{
   0%{
     transform: translateY(-30px);
@@ -100,7 +100,7 @@ h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 
 .userCard > footer.media { background: #e6686a; text-align: center; }
 .userCard > footer.media > a { display: inline-block; width: 40px; line-height: 30px; padding: 5px 0;
-  border-radius: 50%; margin: 16px; }
+  border-radius: 50%; margin: 16px 16px 16px 0; }
 .userCard > footer.media > a:hover { background: #cf5d5f; }
 .userCard svg { width: 30px; height: 30px; fill: white; vertical-align: top; }
 body > main { margin-top: -340px; }
@@ -112,14 +112,14 @@ body > main .downloadResume:hover {
   box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2);
 }
 
-.selfIntroduction { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family: kai; line-height: 1.8; font-size: 18px; }
+.selfIntroduction { max-width: 940px; margin-left: auto; margin-right: auto; text-align: center; font-family: kai; line-height: 1.8; font-size: 16px; }
 
 section.skills,
 section.portfolio{ max-width: 940px; margin-left: auto; margin-right: auto; margin-top: 60px; }
 section.skills > h2 ,
 section.portfolio > h2 { text-align: center; color: #3d4451; font-size: 34px; line-height: 1.2; font-weight: 600; }
 section.skills h3 { font-size: 14px; line-height: 1.1; padding-right: 40px; }
-section.skills > ol { background: white; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 10px; margin-top: 30px; }
+section.skills > ol { background: white; box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5); padding: 42px 50px 20px; margin-top: 30px; }
 section.skills > ol > li { float: left; width: 48%; box-sizing: border-box; }
 section.skills > ol > li:nth-child(even) { float: right; } 
 section.skills .progressBar { height: 5px; background: #FAE1E1; 
@@ -143,3 +143,72 @@ section.portfolio > nav .bar.state-2 .bar-inner{ margin-left: 65px; width: 50px;
 section.portfolio > nav .bar.state-3 .bar-inner{ margin-left: 140px; width: 96px; } 
 section.portfolio .works{ position: relative; } 
 section.portfolio .works > .big, section.portfolio .works > .small { position: absolute; }
+
+section.skills > ol > li.mySkills{
+  width: 100%;
+  line-height: 1.7em
+}
+
+/* 以下为参考的css，有点乱，以后整理 */
+#main {
+  flex: 1;
+  min-height: calc(100vh - 162px);
+  font: 14px/1.5 Arial;
+    color: #666;
+}
+#main ol{
+  list-style: decimal;
+  margin-left: 40px;
+}
+#main section {
+  margin: 15px 20px 0;
+}
+#main section {
+  margin: 30px 20px 0 20px;
+  padding-bottom: 20px;
+}
+#main section h2 {
+  color: #5c99ca;
+  font-size: 16px;
+}
+#main section.protfilo2 {
+  text-align: left;
+}
+#main section.protfilo2 .item {
+  border-bottom: 1px solid #ccc;
+}
+#main section.list .item {
+  padding: 10px 0;
+}
+#main section.list .item h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+#main section h3 {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+#main section.list .item .title {
+  font-weight: bold;
+  color: #4e4e4e;
+}
+#main .mainText {
+  font-weight: bold;
+  color: #fb450c;
+}
+#main section.protfilo2 .item .title {
+  margin-top: 10px;
+}
+#main .btnLink {
+  padding: 6px 15px;
+  background: #fb450c;
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  margin-right: 10px;
+}
+#main .linkwrap {
+  display: flex;
+  margin: 20px;
+}

@@ -2,19 +2,73 @@
 <html>
 
 <head>
-  <title>何雨晴的个人简历</title>
-  <script src="//at.alicdn.com/t/font_451045_32zbfqegtq3t0529.js"></script>
+  <title>前端-何雨晴</title>
+  <script src="//at.alicdn.com/t/font_1067740_92zgfyw09eo.js"></script>
   <style type="text/css">
-    .loading{ width: 200px; height: 200px; position: relative; }
-    .loading::before,.loading::after{ content: ''; position: absolute; width: 0px; height: 0px; background: black; border-radius: 50%; top: 0; left: 0; bottom: 0; right: 0; margin: auto; animation: s 1.5s linear infinite; }
-    .loading::after{ animation-delay: 0.75s; }
-    @keyframes s{ 
-      0%{ width: 0px; height: 0px; opacity: 1; }
-      100%{ width: 100px; height: 100px; opacity: 0; }
+    .loading {
+      width: 200px;
+      height: 200px;
+      position: relative;
     }
-    .icon { width: 1em; height: 1em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
-    .site-welcome{ display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #888; z-index: 1; justify-content: center; align-items: center; }
-    .site-welcome.active{ display: flex; }
+
+    .loading::before,
+    .loading::after {
+      content: '';
+      position: absolute;
+      width: 0px;
+      height: 0px;
+      background: black;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      margin: auto;
+      animation: s 1.5s linear infinite;
+    }
+
+    .loading::after {
+      animation-delay: 0.75s;
+    }
+
+    @keyframes s {
+      0% {
+        width: 0px;
+        height: 0px;
+        opacity: 1;
+      }
+
+      100% {
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+      }
+    }
+
+    .icon {
+      width: 1em;
+      height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+
+    .site-welcome {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #888;
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .site-welcome.active {
+      display: flex;
+    }
   </style>
   <link rel="stylesheet" href="./main.css">
 </head>
@@ -23,41 +77,31 @@
   <div id="topNavBar" class="topNavBar">
     <div class="topNavBar-inner clearfix">
       <a class="logo" href="#" alt="logo" style="float: left;">
-        <span class="rs">RS</span>
-        <span class="card">card</span>
+        <span class="rs">My</span>
+        <span class="card">Resume</span>
       </a>
       <nav class="menu" style="float: right;">
         <ul class="clearfix">
           <li>
-            <a href="#siteAbout">关于</a>
+            <a href="#siteAbout">个人</a>
+          </li>
+          <li>
+            <a href="#siteEdu">教育</a>
+          </li>
+          <li>
+          <li>
+            <a href="#siteJob">工作</a>
           </li>
           <li>
             <a href="#siteSkills">技能</a>
           </li>
           <li>
-            <a href="#siteWorks">作品</a>
-            <ul class="submenu">
+            <a href="#siteWorks">项目</a>
+            <!-- <ul class="submenu">
               <li>作品1</li>
               <li>作品2</li>
               <li>作品3</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">博客</a>
-            <ul class="submenu">
-              <li>博客1</li>
-              <li>博客2</li>
-              <li>博客3</li>
-            </ul>
-          </li>
-          <li>
-            <a href="#">日历</a>
-          </li>
-          <li>
-            <a href="#">联系方式</a>
-          </li>
-          <li>
-            <a href="#">其他</a>
+            </ul> -->
           </li>
         </ul>
       </nav>
@@ -70,41 +114,46 @@
     <div data-x id="siteAbout" class="userCard">
       <div class="pictureAndText clearfix">
         <div class="picture">
-          <img src="./img/avatar.jpg" width=299 height=347 alt="头像">
+          <img src="./img/avatar.jpg" width=109 height=145 alt="头像">
         </div>
         <div class="text">
           <span class="welcome">Hello
             <span class="triangle"></span>
           </span>
-          <h1>何雨晴</h1>
-          <p>前端开发工程师</p>
+          <h1>
+            何雨晴
+            <span style="font-size:0.5em;color: #888;">前端开发工程师</span>
+          </h1>
           <hr>
           <dl>
+            <dt>性别</dt>
+            <dd>女</dd>
             <dt>年龄</dt>
-            <dd>18</dd>
+            <dd>25</dd>
             <dt>所在城市</dt>
-            <dd>北京</dd>
+            <dd>杭州</dd>
             <dt>邮箱</dt>
-            <dd>11111@foxmail.com</dd>
+            <dd>958575100@qq.com</dd>
             <dt>手机</dt>
-            <dd>13811111111</dd>
+            <dd>18267162123</dd>
+            <dt>学校</dt>
+            <dd>专科 杭州计算机学校</dd>
+            <dt>专业</dt>
+            <dd>计算机信息管理</dd>
           </dl>
         </div>
       </div>
       <footer class="media">
-        <a href="#">
+        <span style="color:white">GitHub：</span>
+        <a href="//github.com/oceans42" target="_blank">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-github"></use>
+            <use xlink:href="#i-github"></use>
           </svg>
         </a>
-        <a href="#">
+        <span style="color:white">博客：</span>
+        <a href="//blog.csdn.net/weixin_42971942" target="_blank">
           <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-Ankerwebicon-"></use>
-          </svg>
-        </a>
-        <a href="#">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-weibo"></use>
+            <use xlink:href="#i-csdn"></use>
           </svg>
         </a>
       </footer>
@@ -114,21 +163,42 @@
       <a class="downloadResume" href="./resume.pdf" target="_blank" download>下载 PDF 简历</a>
     </p>
 
-    <p class="selfIntroduction">
-      何雨晴， 资深前端工程师，资深前端讲师，现在在 饥人谷 教前端课程。
-      <br> 技能：前端开发，Rails 开发，Node.js 开发
+    <p class="selfIntroduction" id="siteEdu">
+      <span style="font-size: 34px;font-weight: 600;color: #3d4451;line-height: 1.2;">教育经历</span>
+      <br><br>
+      2013.9-2016.7 杭州计算机学校 专科 计算机信息管理<br>
+      2019.3-专升本在读 厦门大学继续教育学院 本科 计算机科学与技术
     </p>
-
   </main>
+
+
+  <section data-x id="siteJob" class="skills">
+    <h2>工作经历</h2>
+    <br><br>
+    <p>2016/10/17 – 2019/1/30 杭州准到信息科技有限公司 | 前端开发岗位</p><br>
+    <ul style="line-height:1.5em;">
+      <li>主要职责：</li>
+      <li>1. <strong>独立开发</strong>了公司<strong>响应式</strong>官网并负责日常维护
+        <a href="//www.zhundao.net" style="color:#4792e6" target="_blank">官网：https://www.zhundao.net</a>
+      </li>
+      <li>2. 使用 <strong>AngularJS
+          框架</strong>协作开发并持续优化公司SaaS平台「报名签到收款互动系统」的手机端页面和用户管理后台（活动报名、现场前端、3D大屏抽奖、现场投票、保险购买、日对账查询等等功能）
+        <a href="//www.zhundao.net/denglu" style="color:#4792e6" target="_blank">管理后台：https://www.zhundao.net/denglu</a>
+      </li>
+      <li>3. 使用 <strong>AngularJS
+          框架独立开发</strong>了政务管理系统（PC+手机端页面）。<strong>已上线</strong>，目前有<strong>滨江文创办、高新区行政服务中心</strong>等政府机构使用。<a
+          href="//gov.joinhead.com" style="color:#4792e6" target="_blank">官网：https://gov.joinhead.com</a></li>
+    </ul>
+  </section>
   <section data-x id="siteSkills" class="skills">
     <h2>技能</h2>
-    <ol class="clearfix">
+    <ol class="clearfix" style="font-size: 15px;">
       <li>
         <h3>
           HTML 5 &amp; CSS 3
         </h3>
         <div class="progressBar">
-          <div class="progress" style="width: 10%;"></div>
+          <div class="progress" style="width: 80%;"></div>
         </div>
       </li>
       <li>
@@ -136,7 +206,7 @@
           JavaScript
         </h3>
         <div class="progressBar">
-          <div class="progress" style="width: 20%"></div>
+          <div class="progress" style="width: 90%"></div>
         </div>
       </li>
       <li>
@@ -144,7 +214,15 @@
           jQuery
         </h3>
         <div class="progressBar">
-          <div class="progress" style="width: 30%"></div>
+          <div class="progress" style="width: 80%"></div>
+        </div>
+      </li>
+      <li>
+        <h3>
+          ES6
+        </h3>
+        <div class="progressBar">
+          <div class="progress" style="width: 60%"></div>
         </div>
       </li>
       <li>
@@ -157,25 +235,28 @@
       </li>
       <li>
         <h3>
-          React.js
+          Angular.js
         </h3>
         <div class="progressBar">
-          <div class="progress"  style="width: 50%"></div>
+          <div class="progress" style="width: 80%"></div>
         </div>
       </li>
-      <li>
-        <h3>
-          Node.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress"  style="width: 60%"></div>
-        </div>
-      </li>
+
+      <li class="mySkills">1.掌握 <strong>HTML5</strong> ，以及 <strong>CSS3</strong> 的动画、过渡、渐变等新特性</li>
+      <li class="mySkills">2.熟练 JavaScript 及 常用 <strong>ES6</strong> 语法</li>
+      <li class="mySkills">3.熟练 CSS 核心概念，盒模型，文档流，浮动，定位，BFC，各种居中</li>
+      <li class="mySkills">4.熟练 <strong>flex</strong> 弹性布局，移动端配置</li>
+      <li class="mySkills">5.框架：熟练 <strong>Angular.js</strong>，掌握 <strong>Vue</strong> 框架。</li>
+      <li class="mySkills">6.使用过 <strong>Parcel</strong> 打包工具，<strong>SCSS</strong> 语法</li>
+      <li class="mySkills">7.了解 <strong>MVC MVVM</strong> 开发模式，代码层面向<strong>模块化组件化</strong>靠近</li>
+      <li class="mySkills">8.熟练使用 <strong>git bash</strong> 命令行</li>
     </ol>
+
+
   </section>
   <section data-x class="portfolio" id="siteWorks">
-    <h2>作品集</h2>
-    <nav>
+    <h2>项目经历</h2>
+    <!-- <nav>
       <ol class="clearfix">
         <li id="portfolio1">所有</li>
         <li id="portfolio2">框架</li>
@@ -184,21 +265,21 @@
       <div id="portfolioBar" class="bar state-1">
         <div class="bar-inner"></div>
       </div>
-    </nav>
-    <script>
-      portfolio1.onclick= function(){
+    </nav> -->
+    <!-- <script>
+      portfolio1.onclick = function () {
         portfolioBar.className = 'bar state-1'
       }
-      portfolio2.onclick= function(){
+      portfolio2.onclick = function () {
         portfolioBar.className = 'bar state-2'
       }
-      portfolio3.onclick= function(){
+      portfolio3.onclick = function () {
         portfolioBar.className = 'bar state-3'
       }
-    </script>
+    </script> -->
 
 
-    <div class="works" style="height: 597px;">
+    <!-- <div class="works" style="height: 597px;">
       <div class="big" style="top: 0; left: 0;">
         <img src="./img/1.jpg" alt="作品1">
       </div>
@@ -208,82 +289,158 @@
       <div class="small" style="top: 312px; left: 645px;">
         <img src="./img/3.jpg" alt="作品3">
       </div>
+    </div> -->
+
+    <div id="main">
+      <section class="list protfilo2">
+        <div class="item">
+          <h3>① 准到官网</h3>
+          <ul>
+            <span class="title">项目简介:</span>公司的官网，主要介绍了公司的产品、使用方法、场景案例、帮助中心、应用中心
+            <p class="title">项目总结：</p>
+            <ol>
+              <li class="mainText">使用语言：HTML + CSS + Bootstrap3 + JavaScript + JQuery</li>
+              <li>使用了 <span class="mainText">iconfont</span> 网站提供的 icon，<span class="mainText">symbol方式</span>引用</li>
+              <li>写 JavaScript 使用了 <span class="mainText">ES6 </span>新语法</li>
+            </ol>
+            <div class="linkwrap">
+              <a class="mainText btnLink" href="//www.zhundao.net/" target="_blank">项目链接</a>
+            </div>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>② 准到管理后台</h3>
+          <ul>
+            <span class="title">项目简介:</span>给组织活动会议的公司、机构使用的管理后台，功能以应用模式开启，包括 <span class="mainText">40多个</span>
+            应用，涵盖了会议活动所要用到的大多数功能。由我协作开发，配置路由，实现页面的跳转和参数传递. <a style="color:#4792e6" target="_blank"
+              href="//www.zhundao.net/app">应用列表</a>
+            <p class="title">项目总结：</p>
+            <ol>
+              <li class="mainText">使用框架：Angular.js</li>
+              <li>搭配 <span class="mainText">ES6</span> 新特性进行代码编写。</li>
+              <li>使用 <span class="mainText">localStorage</span> 存储用户数据</li>
+              <li>使用 <span class="mainText">Highcharts </span>库制作图表 </li>
+            </ol>
+            <div class="linkwrap">
+              <a class="mainText btnLink" href="//www.zhundao.net/denglu" target="_blank">登陆链接</a>
+            </div>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>③ 政务管理系统</h3>
+          <ul>
+            <span
+              class="title">项目简介:</span>为地方政府提供本地企业工商、税收、财政、营收等大数据服务，全面提升了企业服务效率和服务质量。帮助了高新区行政服务中心企业服务相关部门掌握区内企业动态，提升企业服务和扶持效率。（PC+移动端）
+            <p class="title">项目总结：</p>
+            <ol>
+              <li>使用Angular.js框架<span class="mainText">独立</span>开发</li>
+              <li>搭配 <span class="mainText">ES6</span> 新特性进行代码编写。</li>
+              <li>历史与收藏<span class="mainText">页面关联</span>，可<span class="mainText">随时控制是否收藏</span></li>
+              <li>因为此系统是服务政府机构的，个人用户无法注册，所以此项目没有预览</li>
+            </ol>
+            <div>
+              <img src="img/p1.jpg" alt="" width="70%" style="margin-left: 40px;">
+              <img src="img/p2.png" alt="" width="20%" style="margin-left: 40px;">
+            </div>
+            <div class="linkwrap">
+              <a class="mainText btnLink" href="//gov.joinhead.com/" target="_blank">项目官网</a>
+            </div>
+          </ul>
+        </div>
+        <div class="item">
+          <h3>④ 手机画板</h3>
+          <ul>
+            <span class="title">项目简介:</span>这是工作之外的时间，自己做了一个画板
+            <p class="title">项目总结：</p>
+            <ol>
+              <li>使用了<span class="mainText"> Canvas </span>绘制</li>
+              <li>PC、手机端都可以用</li>
+              <li>多种颜色的画笔</li>
+              <li>可以保存</li>
+            </ol>
+            <div class="linkwrap">
+              <a class="mainText btnLink" href="//github.com/oceans42/canvas-paint" target="_blank">项目源码</a>
+              <a class="mainText btnLink" href="//sparks42.top/canvas-paint/index.html" target="_blank">项目预览</a>
+            </div>
+          </ul>
+        </div>
+      </section>
     </div>
 
   </section>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
   <script>
-// 添加 offset 类
-let specialTags = document.querySelectorAll('[data-x]')
-for(let i =0;i<specialTags.length; i++){
-  specialTags[i].classList.add('offset')
-}
-findClosest()
-window.onscroll = function(x){
-  if(window.scrollY > 0){
-    topNavBar.classList.add('sticky')
-  }else{
-    topNavBar.classList.remove('sticky')
-  }
-  findClosest()
-}
-function findClosest(){
-  let specialTags = document.querySelectorAll('[data-x]')
-  let minIndex = 0
-  for(let i =1;i<specialTags.length; i++){
-    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)){
-      minIndex = i
+    // 添加 offset 类
+    let specialTags = document.querySelectorAll('[data-x]')
+    for (let i = 0; i < specialTags.length; i++) {
+      specialTags[i].classList.add('offset')
     }
-  }
-  // minIndex 就是里窗口顶部最近的元素
-  specialTags[minIndex].classList.remove('offset')
-  let id = specialTags[minIndex].id
-  let a = document.querySelector('a[href="#'+ id + '"]')
-  let li = a.parentNode
-  let brothersAndMe = li.parentNode.children
-  for(let i=0; i<brothersAndMe.length; i++){
-    brothersAndMe[i].classList.remove('highlight')
-  }
-  li.classList.add('highlight')
-}
-let liTags = document.querySelectorAll('nav.menu > ul > li')
-for(let i=0; i<liTags.length; i++){
-  liTags[i].onmouseenter = function(x){
-    x.currentTarget.classList.add('active')
-  }
-  liTags[i].onmouseleave = function(x){
-    x.currentTarget.classList.remove('active')
-  }
-}
-let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-function animate(time) {
-  requestAnimationFrame(animate);
-  TWEEN.update(time);
-}
-requestAnimationFrame(animate);
-for(let i=0; i<aTags.length; i++){
-  aTags[i].onclick = function(x){
-    x.preventDefault()
-    let a = x.currentTarget
-    let href = a.getAttribute('href') //'#siteAbout'
-    let element = document.querySelector(href)
-    let top = element.offsetTop
-    let currentTop = window.scrollY
-    let targetTop = top - 80
-    let s = targetTop - currentTop // 路程
-    var coords = { y: currentTop}; // 起始位置
-    var t = Math.abs((s/100)*300) // 时间
-    if(t>500){ t = 500 }
-    var tween = new TWEEN.Tween(coords) // 起始位置
-      .to({ y: targetTop}, t) // 结束位置 和 时间
-      .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
-      .onUpdate(function() {
-        // coords.y 已经变了
-        window.scrollTo(0,coords.y) // 如何更新界面
-      })
-      .start(); // 开始缓动
+    findClosest()
+    window.onscroll = function (x) {
+      if (window.scrollY > 0) {
+        topNavBar.classList.add('sticky')
+      } else {
+        topNavBar.classList.remove('sticky')
+      }
+      findClosest()
     }
-}
+    function findClosest() {
+      let specialTags = document.querySelectorAll('[data-x]')
+      let minIndex = 0
+      for (let i = 1; i < specialTags.length; i++) {
+        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
+          minIndex = i
+        }
+      }
+      // minIndex 就是里窗口顶部最近的元素
+      specialTags[minIndex].classList.remove('offset')
+      let id = specialTags[minIndex].id
+      let a = document.querySelector('a[href="#' + id + '"]')
+      let li = a.parentNode
+      let brothersAndMe = li.parentNode.children
+      for (let i = 0; i < brothersAndMe.length; i++) {
+        brothersAndMe[i].classList.remove('highlight')
+      }
+      li.classList.add('highlight')
+    }
+    let liTags = document.querySelectorAll('nav.menu > ul > li')
+    for (let i = 0; i < liTags.length; i++) {
+      liTags[i].onmouseenter = function (x) {
+        x.currentTarget.classList.add('active')
+      }
+      liTags[i].onmouseleave = function (x) {
+        x.currentTarget.classList.remove('active')
+      }
+    }
+    let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+    function animate(time) {
+      requestAnimationFrame(animate);
+      TWEEN.update(time);
+    }
+    requestAnimationFrame(animate);
+    for (let i = 0; i < aTags.length; i++) {
+      aTags[i].onclick = function (x) {
+        x.preventDefault()
+        let a = x.currentTarget
+        let href = a.getAttribute('href') //'#siteAbout'
+        let element = document.querySelector(href)
+        let top = element.offsetTop
+        let currentTop = window.scrollY
+        let targetTop = top - 80
+        let s = targetTop - currentTop // 路程
+        var coords = { y: currentTop }; // 起始位置
+        var t = Math.abs((s / 100) * 300) // 时间
+        if (t > 500) { t = 500 }
+        var tween = new TWEEN.Tween(coords) // 起始位置
+          .to({ y: targetTop }, t) // 结束位置 和 时间
+          .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
+          .onUpdate(function () {
+            // coords.y 已经变了
+            window.scrollTo(0, coords.y) // 如何更新界面
+          })
+          .start(); // 开始缓动
+      }
+    }
   </script>
 </body>
 
