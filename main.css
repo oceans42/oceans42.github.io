@@ -5,6 +5,7 @@ hr { height: 0; border: none; border-top: 1px solid #dedede; }
 ul, ol { list-style: none; }
 h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 .clearfix::after { content: ''; display: block; clear: both; }
+dd,dt{height:20px;}
 
 /* [data-x].active{
   outline: 10px solid red;
