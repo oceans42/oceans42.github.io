@@ -1,445 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>前端-何雨晴</title>
-  <script src="//at.alicdn.com/t/font_1067740_92zgfyw09eo.js"></script>
-  <style type="text/css">
-    .loading {
-      width: 200px;
-      height: 200px;
-      position: relative;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>何雨晴—简历</title>
+  <style>
+    .icon { width: 1.2em; height: 1.2em; vertical-align: -0.15em; fill: currentColor; overflow: hidden; }
 
-    .loading::before,
-    .loading::after {
-      content: '';
-      position: absolute;
-      width: 0px;
-      height: 0px;
-      background: black;
-      border-radius: 50%;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      margin: auto;
-      animation: s 1.5s linear infinite;
-    }
+    body { margin: 0; font: 14px/1.5 Arial; color: #666; background: #efefef; }
+    .layout { max-width: 900px; margin-left: auto; margin-right: auto; }
+    #page { display: flex; flex-wrap: wrap; background: #fff; margin-top: 10px; margin-bottom: 10px; }
 
-    .loading::after {
-      animation-delay: 0.75s;
-    }
+    header { background: #3c3c3c; width: 100%; text-align: center; padding: 60px 0 10px 0; color: #fff; }
+    header>h1 { font-size: 30px; margin-bottom: 0; }
+    header>p { font-size: 14px; color: #aaa; margin: 0; }
 
-    @keyframes s {
-      0% {
-        width: 0px;
-        height: 0px;
-        opacity: 1;
-      }
+    aside { width: 240px; border-right: 1px solid #ccc; position: relative; padding-top: 100px; }
+    aside .avatar { text-align: center; position: absolute; top: -80px; width: 100%; }
+    aside .avatar img { width: 160px; height: 160px; border-radius: 50%; border: 1px solid #ccc; background: #ccc; }
 
-      100% {
-        width: 100px;
-        height: 100px;
-        opacity: 0;
-      }
-    }
+    section { border-bottom: 1px solid #ccc; margin: 30px 20px 0 20px; padding-bottom: 20px; }
+    section h2 { color: #5c99ca; font-size: 16px; }
+    section h3 { font-size: 16px; color: #333; }
+    section a { color: #333; }
 
-    .icon {
-      width: 1em;
-      height: 1em;
-      vertical-align: -0.15em;
-      fill: currentColor;
-      overflow: hidden;
-    }
+    .personal .item span:first-child { display: inline-block; width: 70px; }
+    .personal .item span:last-child::before { content: ':'; margin-right: 10px; }
 
-    .site-welcome {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: #888;
-      z-index: 1;
-      justify-content: center;
-      align-items: center;
-    }
+    .skills .item { display: flex; align-items: center; flex-wrap: wrap;}
+    .skills .keyword { width: 80px; }
+    .skills .rule { flex: 1; height: 4px; background: #ccc; }
+    .skills .rule i { display: block; width: 10%; height: 4px; background: #000; }
 
-    .site-welcome.active {
-      display: flex;
-    }
+    .contact .item span { margin-left: 10px; }
+
+    main { flex: 1; min-height: calc(100vh - 162px); }
+
+    .mainText { font-weight: bold; color: #fb450c; }
+    .blackText { font-weight: bold; color: #000; }
+
+    @media (max-width: 768px) {
+      header { padding-top: 20px; padding-bottom: 90px; }
+      aside { width: 100%; padding-top: 0px; }
+      aside .avatar img { width: 100px; height: 100px; }
+    } 
   </style>
-  <link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-  <div id="topNavBar" class="topNavBar">
-    <div class="topNavBar-inner clearfix">
-      <a class="logo" href="#" alt="logo" style="float: left;">
-        <span class="rs">My</span>
-        <span class="card">Resume</span>
-      </a>
-      <nav class="menu" style="float: right;">
-        <ul class="clearfix">
-          <li>
-            <a href="#siteAbout">个人</a>
-          </li>
-          <li>
-            <a href="#siteEdu">教育</a>
-          </li>
-          <li>
-          <li>
-            <a href="#siteJob">工作</a>
-          </li>
-          <li>
-            <a href="#siteSkills">技能</a>
-          </li>
-          <li>
-            <a href="#siteWorks">项目</a>
-            <!-- <ul class="submenu">
-              <li>作品1</li>
-              <li>作品2</li>
-              <li>作品3</li>
-            </ul> -->
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </div>
-  <div class="banner">
-    <div class="mask"></div>
-  </div>
-  <main>
-    <div data-x id="siteAbout" class="userCard">
-      <div class="pictureAndText clearfix">
-        <div class="picture">
-          <img src="./img/avatar.jpg" width=250 height=333 alt="头像">
-        </div>
-        <div class="text">
-          <span class="welcome">Hello
-            <span class="triangle"></span>
-          </span>
-          <h1>何雨晴</h1>
-          <p>前端开发工程师</p>
-          <hr>
-          <dl>
-            <dt>性别</dt>
-            <dd>女</dd>
-            <dt>年龄</dt>
-            <dd>25</dd>
-            <dt>城市</dt>
-            <dd>杭州</dd>
-            <dt>邮箱</dt>
-            <dd>958575100@qq.com</dd>
-            <dt>手机</dt>
-            <dd>18267162123</dd>
-            <dt>学校</dt>
-            <dd>专科 杭州计算机学校</dd>
-            <dt>专业</dt>
-            <dd>计算机信息管理</dd>
-          </dl>
-        </div>
+  <div class="layout" id="page">
+    <header>
+      <h1>何雨晴</h1>
+      <p>应聘前端工程师</p>
+    </header>
+    <aside>
+      <div class="avatar">
+        <img src="avatar.jpg" alt="avatar">
       </div>
-      <footer class="media">
-        <span style="color:white">GitHub：</span>
-        <a href="//github.com/oceans42" target="_blank">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#i-github"></use>
-          </svg>
-        </a>
-        <span style="color:white">博客：</span>
-        <a href="//blog.csdn.net/weixin_42971942" target="_blank">
-          <svg class="icon" aria-hidden="true">
-            <use xlink:href="#i-csdn"></use>
-          </svg>
-        </a>
-      </footer>
-    </div>
-
-    <p class="downloadResume-wrapper">
-      <a class="downloadResume" href="./何雨晴-前端-简历.pdf" target="_blank" download>下载 PDF 简历</a>
-    </p>
-
-    <p class="selfIntroduction" id="siteEdu">
-      <span style="font-size: 34px;font-weight: 600;color: #3d4451;line-height: 1.2;">教育经历</span>
-      <br><br>
-      2013.9-2016.7 杭州计算机学校 专科 计算机信息管理<br>
-      2019.3-专升本在读 厦门大学继续教育学院 本科 计算机科学与技术
-    </p>
-  </main>
-
-
-  <section data-x id="siteJob" class="skills">
-    <h2>工作经历</h2>
-    <br><br>
-    <p>2016/10/17 – 2019/1/30 杭州准到信息科技有限公司 | 前端开发岗位</p><br>
-    <ul style="line-height:1.6em;">
-      <li>主要职责：</li>
-      <li>1. <strong>独立开发</strong>了公司<strong>响应式</strong>官网并负责日常维护
-        <a href="//www.zhundao.net" style="color:#4792e6" target="_blank">官网：https://www.zhundao.net</a>
-      </li>
-      <li>2. 使用 <strong>AngularJS
-          框架</strong>协作开发并持续优化公司SaaS平台「报名签到收款互动系统」的手机端页面和用户管理后台（活动报名、现场前端、3D大屏抽奖、现场投票、保险购买、日对账查询等等功能）
-        <a href="//www.zhundao.net/denglu" style="color:#4792e6" target="_blank">管理后台：https://www.zhundao.net/denglu</a>
-      </li>
-      <li>3. 使用 <strong>AngularJS
-          框架独立开发</strong>了政务管理系统（PC+手机端页面）。<strong>已上线</strong>，目前有<strong>滨江文创办、高新区行政服务中心</strong>等政府机构使用。<a
-          href="//gov.joinhead.com" style="color:#4792e6" target="_blank">官网：https://gov.joinhead.com</a></li>
-    </ul>
-  </section>
-  <section data-x id="siteSkills" class="skills">
-    <h2>技能</h2>
-    <ol class="clearfix" style="font-size: 15px;">
-      <li>
-        <h3>
-          HTML 5 &amp; CSS 3
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 80%;"></div>
+      <section>
+        <h2>基础信息</h2>
+        <div class="detail personal">
+          <div class="item">
+            <span>性别</span>
+            <span>女</span>
+          </div>
+          <div class="item">
+            <span>年龄</span>
+            <span>25</span>
+          </div>
+          <div class="item">
+            <span>工作经验</span>
+            <span>2年</span>
+          </div>
+          <div class="item">
+            <span>学历</span>
+            <span>专科</span>
+          </div>
+          <div class="item">
+            <span>专业</span>
+            <span>计算机信息管理</span>
+          </div>
+          <div class="item">
+            <span>学校</span>
+            <span>杭州计算机学校</span>
+          </div>
+          <div class="item">
+            <span class="mainText">GitHub</span>
+            <span><a href="//github.com/oceans42" target="_blank">oceans42</a></span>
+          </div>
+          <div class="item">
+            <span class="mainText">我的博客</span>
+            <span><a href="//blog.csdn.net/weixin_42971942" target="_blank">CSDN博客</a></span>
+          </div>
         </div>
-      </li>
-      <li>
-        <h3>
-          JavaScript
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 90%"></div>
+      </section>
+
+
+      <section>
+        <h2>专业技能</h2>
+        <div class="detail skills">
+          <div class="item">1.掌握<span class="mainText"> HTML5</span> 、<span class="mainText"> CSS3</span>、<span class="mainText"> ES6</span>
+          </div>
+          <div class="item">
+              2.熟练 <span class="mainText"> JavaScript</span>，掌握 <span class="mainText"> JQuery</span>
+          </div>
+          <div class="item">
+              3.熟练 CSS 核心概念，盒模型，文档流，浮动，定位，BFC，各种居中
+          </div>
+          <div class="item">
+              4.熟练&nbsp;<span class="mainText">flex</span>&nbsp;弹性布局
+          </div>
+          <div class="item">
+              5.熟练&nbsp;<span class="mainText">Angular.js</span>&nbsp;，掌握&nbsp;<span class="mainText">Vue</span>&nbsp;框架。
+          </div>
+          <div class="item">
+              6.使用过&nbsp;<span class="mainText">Parcel</span>&nbsp;打包工具，&nbsp;<span class="mainText">SCSS</span>&nbsp;语法
+          </div>
+          <div class="item">
+              7.了解 &nbsp;<span class="mainText">MVC MVVM</span>&nbsp; 开发模式，代码层面向模块化组件化靠近
+          </div>
+          <div class="item">
+              8.熟练使用 &nbsp;<span class="mainText">git bash</span>&nbsp; 命令行
+          </div>
         </div>
-      </li>
-      <li>
-        <h3>
-          jQuery
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 80%"></div>
+      </section>
+
+      <section>
+        <h2>联系方式</h2>
+        <div class="detail contact">
+          <div class="item">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#i-phone" fill="#fe5f5f"></use>
+            </svg>
+            <span>18267162123</span>
+          </div>
+          <div class="item">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#i-email" fill="#6ac1e7"></use>
+            </svg>
+            <span>958575100@qq.com</span>
+          </div>
+          <div class="item">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#i-wechat" fill="#00bf27"></use>
+            </svg>
+            <span>sparks42</span>
+          </div>
+          <div class="item">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#i-city" fill="#f5a623"></use>
+            </svg>
+            <span>杭州</span>
+          </div>
         </div>
-      </li>
-      <li>
-        <h3>
-          ES6
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 60%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          Vue.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 40%"></div>
-        </div>
-      </li>
-      <li>
-        <h3>
-          Angular.js
-        </h3>
-        <div class="progressBar">
-          <div class="progress" style="width: 80%"></div>
-        </div>
-      </li>
-
-      <li class="mySkills">1.掌握 <strong>HTML5</strong> ，以及 <strong>CSS3</strong> 的动画、过渡、渐变等新特性</li>
-      <li class="mySkills">2.熟练 JavaScript 及 常用 <strong>ES6</strong> 语法</li>
-      <li class="mySkills">3.熟练 CSS 核心概念，盒模型，文档流，浮动，定位，BFC，各种居中</li>
-      <li class="mySkills">4.熟练 <strong>flex</strong> 弹性布局，移动端配置</li>
-      <li class="mySkills">5.框架：熟练 <strong>Angular.js</strong>，掌握 <strong>Vue</strong> 框架。</li>
-      <li class="mySkills">6.使用过 <strong>Parcel</strong> 打包工具，<strong>SCSS</strong> 语法</li>
-      <li class="mySkills">7.了解 <strong>MVC MVVM</strong> 开发模式，代码层面向<strong>模块化组件化</strong>靠近</li>
-      <li class="mySkills">8.熟练使用 <strong>git bash</strong> 命令行</li>
-    </ol>
+      </section>
+    </aside>
 
 
-  </section>
-  <section data-x class="portfolio" id="siteWorks">
-    <h2>项目经历</h2>
-    <!-- <nav>
-      <ol class="clearfix">
-        <li id="portfolio1">所有</li>
-        <li id="portfolio2">框架</li>
-        <li id="portfolio3">原生JS&amp;CSS</li>
-      </ol>
-      <div id="portfolioBar" class="bar state-1">
-        <div class="bar-inner"></div>
-      </div>
-    </nav> -->
-    <!-- <script>
-      portfolio1.onclick = function () {
-        portfolioBar.className = 'bar state-1'
-      }
-      portfolio2.onclick = function () {
-        portfolioBar.className = 'bar state-2'
-      }
-      portfolio3.onclick = function () {
-        portfolioBar.className = 'bar state-3'
-      }
-    </script> -->
-
-
-    <!-- <div class="works" style="height: 597px;">
-      <div class="big" style="top: 0; left: 0;">
-        <img src="./img/1.jpg" alt="作品1">
-      </div>
-      <div class="small" style="top: 0; left: 645px;">
-        <img src="./img/2.jpg" alt="作品2">
-      </div>
-      <div class="small" style="top: 312px; left: 645px;">
-        <img src="./img/3.jpg" alt="作品3">
-      </div>
-    </div> -->
-
-    <div id="main">
-      <section class="list protfilo2">
+    <main>
+      <section>
+        <h2>工作经历</h2>
+        <p>2016/10/17 – 2019/1/30 杭州准到信息科技有限公司 | 前端开发岗位</p>
+        <p>主要职责：</p>
+        <ol>
+          <li><span class="blackText">独立开发</span>了公司<span class="blackText">响应式</span>官网并负责日常维护。官网：<a href="//www.zhundao.net" target="_blank">https://www.zhundao.net</a>
+          </li>
+          <li>使用 <span class="blackText">AngularJS</span> 框架协作开发并持续优化公司SaaS平台「报名签到收款互动系统」的手机端页面和用户管理后台（活动报名、现场前端、3D大屏抽奖、现场投票、保险购买、日对账查询等等功能）。管理后台：<a href="//www.zhundao.net/denglu" target="_blank">https://www.zhundao.net/denglu</a>
+          </li>
+          <li>使用 <span class="blackText">AngularJS 框架独立开发</span>了政务管理系统（PC+手机端页面）。<span class="blackText">已上线</span>，目前有<span class="blackText">滨江文创办、高新区行政服务中心</span>等政府机构使用。官网：<a href="//gov.joinhead.com" target="_blank">https://gov.joinhead.com</a>
+          </li>
+        </ol>
+      </section>
+    
+      <section>
+        <h2>教育经历</h2>
         <div class="item">
-          <h3>① 准到官网</h3>
+          <h3>杭州计算机学校</h3>
+          <p>2013.9-2016.7 专科 计算机信息管理</p>
+          <h3>厦门大学继续教育学院</h3>
+          <p>2019.3-专升本在读 本科 计算机科学与技术</p>
+        </div>
+      </section>
+      <section>
+        <h2>项目经历</h2>
+        <div class="item">
+          <h3>准到官网</h3>
           <ul>
-            <span class="title">项目简介:</span>公司的官网，主要介绍了公司的产品、使用方法、场景案例、帮助中心、应用中心
-            <p class="title">项目总结：</p>
-            <ol>
-              <li class="mainText">使用语言：HTML + CSS + Bootstrap3 + JavaScript + JQuery</li>
-              <li>使用了 <span class="mainText">iconfont</span> 网站提供的 icon，<span class="mainText">symbol方式</span>引用</li>
-              <li>写 JavaScript 使用了 <span class="mainText">ES6 </span>新语法</li>
-            </ol>
-            <div class="linkwrap">
-              <a class="mainText btnLink" href="//www.zhundao.net/" target="_blank">项目链接</a>
-            </div>
+            <li>项目介绍： 公司的官网，主要介绍了公司的产品、使用方法、场景案例、帮助中心、应用中心。由我<span class="mainText">独立</span>开发和维护</li>
+            <li>技术栈：<span class="mainText">HTML、CSS、Bootstrap3、JavaScript、JQuery、ES6</span></li>
+            <li>项目链接: <a href="//www.zhundao.net/" target="_blank">点击查看</a></li>
           </ul>
         </div>
         <div class="item">
-          <h3>② 准到管理后台</h3>
+          <h3>准到管理后台</h3>
           <ul>
-            <span class="title">项目简介:</span>给组织活动会议的公司、机构使用的管理后台，功能以应用模式开启，包括 <span class="mainText">40多个</span>
-            应用，涵盖了会议活动所要用到的大多数功能。由我协作开发，配置路由，实现页面的跳转和参数传递. <a style="color:#4792e6" target="_blank"
-              href="//www.zhundao.net/app">应用列表</a>
-            <p class="title">项目总结：</p>
-            <ol>
-              <li class="mainText">使用框架：Angular.js</li>
-              <li>搭配 <span class="mainText">ES6</span> 新特性进行代码编写。</li>
-              <li>使用 <span class="mainText">localStorage</span> 存储用户数据</li>
-              <li>使用 <span class="mainText">Highcharts </span>库制作图表 </li>
-            </ol>
-            <div class="linkwrap">
-              <a class="mainText btnLink" href="//www.zhundao.net/denglu" target="_blank">登陆链接</a>
-            </div>
+            <li>项目介绍：公司的主要产品，活动会议SAAS平台，包括 <span class="mainText">40多个</span> 应用，涵盖了会议活动所要用到的大多数功能。参与协作开发和维护</li>
+            <li>技术栈：<span class="mainText">Angular.js、ES6、localStorage、Highcharts</span></li>
+            <li>应用介绍: <a href="//www.zhundao.net/app" target="_blank">点击查看</a></li>
+            <li>后台链接: <a href="//www.zhundao.net/denglu" target="_blank">点击查看</a></li>
           </ul>
         </div>
         <div class="item">
-          <h3>③ 政务管理系统</h3>
+          <h3>政务管理系统</h3>
           <ul>
-            <span
-              class="title">项目简介:</span>为地方政府提供本地企业工商、税收、财政、营收等大数据服务，全面提升了企业服务效率和服务质量。帮助了高新区行政服务中心企业服务相关部门掌握区内企业动态，提升企业服务和扶持效率。（PC+移动端）
-            <p class="title">项目总结：</p>
-            <ol>
-              <li>使用Angular.js框架<span class="mainText">独立</span>开发</li>
-              <li>搭配 <span class="mainText">ES6</span> 新特性进行代码编写。</li>
-              <li>历史与收藏<span class="mainText">页面关联</span>，可<span class="mainText">随时控制是否收藏</span></li>
-              <li>因为此系统是服务政府机构的，个人用户无法注册，所以此项目没有预览</li>
-            </ol>
-            <div>
-              <img src="img/p1.jpg" alt="" width="70%" style="margin-left: 40px;">
-              <img src="img/p2.png" alt="" width="20%" style="margin-left: 40px;">
-            </div>
-            <div class="linkwrap">
-              <a class="mainText btnLink" href="//gov.joinhead.com/" target="_blank">项目官网</a>
-            </div>
+            <li>项目介绍： 为地方政府提供本地企业工商、税收、财政、营收等大数据服务，全面提升了企业服务效率和服务质量。帮助了高新区行政服务中心企业服务相关部门掌握区内企业动态，提升企业服务和扶持效率。（PC+移动端）由我<span class="mainText">独立</span>开发和维护</li>
+            <li>技术栈：<span class="mainText">Angular.js、ES6、sessionStorage</span></li>
+            <li>官网链接: <a href="//gov.joinhead.com" target="_blank">点击查看</a></li>
+            <li>预览项目: 因为此系统是服务政府机构的，个人用户无法注册，所以此项目没有预览</li>
           </ul>
+          <div>
+            <img src="p1.jpg" alt="" width="70%">
+            <img src="p2.png" alt="" width="20%">
+          </div>
         </div>
         <div class="item">
-          <h3>④ 手机画板</h3>
+          <h3>手机画板</h3>
           <ul>
-            <span class="title">项目简介:</span>这是工作之外的时间，自己做了一个画板
-            <p class="title">项目总结：</p>
-            <ol>
-              <li>使用了<span class="mainText"> Canvas </span>绘制</li>
-              <li>PC、手机端都可以用</li>
-              <li>多种颜色的画笔</li>
-              <li>可以保存</li>
-            </ol>
-            <div class="linkwrap">
-              <a class="mainText btnLink" href="//github.com/oceans42/canvas-paint" target="_blank">项目源码</a>
-              <a class="mainText btnLink" href="//sparks42.top/canvas-paint/index.html" target="_blank">项目预览</a>
-            </div>
+            <li>项目介绍： 这是工作之外的时间，自己做了一个画板，PC、手机端都可以用，有多种颜色的画笔，画作可以保存</li>
+            <li>技术栈：<span class="mainText">Canvas</span></li>
+            <li>项目源码: <a href="//github.com/oceans42/canvas-paint" target="_blank">github.com/oceans42/canvas-paint</a></li>
+            <li>项目预览: <a href="//sparks42.top/canvas-paint/index.html" target="_blank">点击查看</a></li>
           </ul>
         </div>
       </section>
-    </div>
+      <section>
+        <h2>个人评价</h2>
+        <p>喜欢做一些自娱项目</p>
+      </section>
+    </main>
+  </div>
 
-  </section>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-  <script>
-    // 添加 offset 类
-    let specialTags = document.querySelectorAll('[data-x]')
-    for (let i = 0; i < specialTags.length; i++) {
-      specialTags[i].classList.add('offset')
-    }
-    findClosest()
-    window.onscroll = function (x) {
-      if (window.scrollY > 0) {
-        topNavBar.classList.add('sticky')
-      } else {
-        topNavBar.classList.remove('sticky')
-      }
-      findClosest()
-    }
-    function findClosest() {
-      let specialTags = document.querySelectorAll('[data-x]')
-      let minIndex = 0
-      for (let i = 1; i < specialTags.length; i++) {
-        if (Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY)) {
-          minIndex = i
-        }
-      }
-      // minIndex 就是里窗口顶部最近的元素
-      specialTags[minIndex].classList.remove('offset')
-      let id = specialTags[minIndex].id
-      let a = document.querySelector('a[href="#' + id + '"]')
-      let li = a.parentNode
-      let brothersAndMe = li.parentNode.children
-      for (let i = 0; i < brothersAndMe.length; i++) {
-        brothersAndMe[i].classList.remove('highlight')
-      }
-      li.classList.add('highlight')
-    }
-    let liTags = document.querySelectorAll('nav.menu > ul > li')
-    for (let i = 0; i < liTags.length; i++) {
-      liTags[i].onmouseenter = function (x) {
-        x.currentTarget.classList.add('active')
-      }
-      liTags[i].onmouseleave = function (x) {
-        x.currentTarget.classList.remove('active')
-      }
-    }
-    let aTags = document.querySelectorAll('nav.menu > ul > li > a')
-    function animate(time) {
-      requestAnimationFrame(animate);
-      TWEEN.update(time);
-    }
-    requestAnimationFrame(animate);
-    for (let i = 0; i < aTags.length; i++) {
-      aTags[i].onclick = function (x) {
-        x.preventDefault()
-        let a = x.currentTarget
-        let href = a.getAttribute('href') //'#siteAbout'
-        let element = document.querySelector(href)
-        let top = element.offsetTop
-        let currentTop = window.scrollY
-        let targetTop = top - 80
-        let s = targetTop - currentTop // 路程
-        var coords = { y: currentTop }; // 起始位置
-        var t = Math.abs((s / 100) * 300) // 时间
-        if (t > 500) { t = 500 }
-        var tween = new TWEEN.Tween(coords) // 起始位置
-          .to({ y: targetTop }, t) // 结束位置 和 时间
-          .easing(TWEEN.Easing.Cubic.InOut) // 缓动类型
-          .onUpdate(function () {
-            // coords.y 已经变了
-            window.scrollTo(0, coords.y) // 如何更新界面
-          })
-          .start(); // 开始缓动
-      }
-    }
-  </script>
+
+  <script src="//at.alicdn.com/t/font_1122715_ps5pppzed7f.js"></script>
 </body>
 
 </html>
