@@ -10,7 +10,8 @@
 
     body { margin: 0; font: 14px/1.5 Arial; color: #666; background: #efefef; }
     .layout { max-width: 900px; margin-left: auto; margin-right: auto; }
-    #page { display: flex; flex-wrap: wrap; background: #fff; margin-top: 10px; margin-bottom: 10px; }
+    #page { display: flex; flex-wrap: wrap; background: #fff; margin-top: 10px; margin-bottom: 10px;
+    position: relative; }
 
     header { background: #3c3c3c; width: 100%; text-align: center; padding: 60px 0 10px 0; color: #fff; }
     header>h1 { font-size: 30px; margin-bottom: 0; }
@@ -39,6 +40,8 @@
 
     .mainText { font-weight: bold; color: #fb450c; }
     .blackText { font-weight: bold; color: #000; }
+    .go { color: #fff; background: #FF5722; position: absolute; top: 10px; right: 10px;
+    padding: 10px; text-decoration: none; z-index: 100; }
 
     @media (max-width: 768px) {
       header { padding-top: 20px; padding-bottom: 90px; }
@@ -229,6 +232,8 @@
         <p>喜欢做一些自娱项目</p>
       </section> -->
     </main>
+
+    <a href="./何雨晴-前端.pdf" target="_blank" class="go" download>下载 PDF 简历</a>
   </div>
 
   <script src="//at.alicdn.com/t/font_1122715_a4gs6h4474m.js"></script>
